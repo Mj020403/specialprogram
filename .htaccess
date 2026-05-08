@@ -1,0 +1,53 @@
+RewriteEngine On
+
+# Keep direct access to real categorized folders
+RewriteRule ^app/ - [L]
+RewriteRule ^database/ - [L]
+RewriteRule ^docs/ - [L]
+RewriteRule ^modules/ - [L]
+RewriteRule ^public/ - [L]
+
+# Public assets and uploads
+RewriteRule ^assets/(.*)$ public/assets/$1 [L,NC]
+RewriteRule ^uploads/(.*)$ public/uploads/$1 [L,NC]
+
+# Users
+RewriteRule ^auth/(.*)$ modules/users/auth/$1 [L,NC]
+RewriteRule ^approver/(.*)$ modules/users/roles/approver/$1 [L,NC]
+RewriteRule ^auditor/(.*)$ modules/users/roles/auditor/$1 [L,NC]
+RewriteRule ^citizen/(.*)$ modules/users/roles/citizen/$1 [L,NC]
+RewriteRule ^department_head/(.*)$ modules/users/roles/department_head/$1 [L,NC]
+RewriteRule ^executive/(.*)$ modules/users/roles/executive/$1 [L,NC]
+RewriteRule ^mayor/(.*)$ modules/users/roles/mayor/$1 [L,NC]
+RewriteRule ^records/(.*)$ modules/users/roles/records/$1 [L,NC]
+RewriteRule ^reviewer/(.*)$ modules/users/roles/reviewer/$1 [L,NC]
+RewriteRule ^staff/(.*)$ modules/users/roles/staff/$1 [L,NC]
+RewriteRule ^task_force/(.*)$ modules/users/roles/task_force/$1 [L,NC]
+RewriteRule ^password/(.*)$ modules/users/account/password/$1 [L,NC]
+RewriteRule ^profile/(.*)$ modules/users/account/profile/$1 [L,NC]
+
+# Agricultural modules
+RewriteRule ^api/(.*)$ modules/api/$1 [L,NC]
+RewriteRule ^attendance/(.*)$ modules/agri/attendance/$1 [L,NC]
+RewriteRule ^crops/(.*)$ modules/agri/crops/$1 [L,NC]
+RewriteRule ^events/(.*)$ modules/agri/events/$1 [L,NC]
+RewriteRule ^households/(.*)$ modules/agri/households/$1 [L,NC]
+RewriteRule ^import/(.*)$ modules/agri/import/$1 [L,NC]
+RewriteRule ^interviews/(.*)$ modules/agri/interviews/$1 [L,NC]
+RewriteRule ^monitoring/(.*)$ modules/agri/monitoring/$1 [L,NC]
+RewriteRule ^notifications/(.*)$ modules/agri/notifications/$1 [L,NC]
+RewriteRule ^qr/(.*)$ modules/agri/qr/$1 [L,NC]
+RewriteRule ^reports/(.*)$ modules/agri/reports/$1 [L,NC]
+
+# Document and workflow modules
+RewriteRule ^comments/(.*)$ modules/documents/comments/$1 [L,NC]
+RewriteRule ^department/(.*)$ modules/documents/department/$1 [L,NC]
+RewriteRule ^documents/(.*)$ modules/documents/documents/$1 [L,NC]
+RewriteRule ^files/(.*)$ modules/documents/files/$1 [L,NC]
+RewriteRule ^search/(.*)$ modules/documents/search/$1 [L,NC]
+RewriteRule ^shared/(.*)$ modules/documents/shared/$1 [L,NC]
+RewriteRule ^shares/(.*)$ modules/documents/shares/$1 [L,NC]
+RewriteRule ^workflow/(.*)$ modules/documents/workflow/$1 [L,NC]
+
+# Admin
+RewriteRule ^admin/(.*)$ modules/admin/$1 [L,NC]

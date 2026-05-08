@@ -1,0 +1,2 @@
+<?php require_once dirname(__DIR__,3).'/app/bootstrap.php'; app_require('app/includes/header.php');?>
+<div class="p-6"><h1 class="text-3xl font-black">First Validation</h1><p>Field inspection only.</p><ul><li>Area exists</li><li>Ownership confirmed</li><li>Accessible location</li><li>Program suitability</li><li>Applicant willingness</li></ul><button class="app-btn-primary">Approve Validation</button></div><?php app_require('app/includes/footer.php');?>
